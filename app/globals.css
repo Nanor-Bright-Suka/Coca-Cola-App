@@ -2,3 +2,160 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+   .nav-link {
+    @apply text-white text-lg font-bold;
+  }
+
+  .main-p {
+    @apply text-white text-sm;
+
+  }
+
+  .main-span {
+    @apply text-white text-sm block mt-5;
+  } 
+
+
+}
+
+
+@layer components {
+    .container-div {
+    @apply overflow-hidden;
+  }  
+
+  .header-styles {
+    @apply flex justify-around items-center pt-6;
+   
+  }
+
+  .logo-div {
+    @apply justify-center items-center;
+  }
+ 
+  .logo {
+    @apply w-full h-auto min-w-[90px];
+    filter: invert(100%) brightness(200%);
+  }
+
+
+   .nav {
+    @apply flex justify-between items-center gap-10;
+  }
+
+  .nav-menu {
+    @apply flex  ml-72;
+  }
+
+  .nav-link {
+    @apply hidden;
+  }  
+
+
+  .main-h1 {
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 8px;
+  }
+
+  .main-styles {
+    @apply flex justify-around items-center  mt-10 flex-wrap-reverse max-w-[95%] gap-10;
+  }
+
+  .main-text {
+    @apply flex flex-col w-[40%] min-w-[410px] justify-center items-center;
+  }
+
+  .main-btn {
+    @apply bg-white text-[#d35400] py-2 px-4 mt-4;
+  }
+
+  .main-img-div{
+    @apply flex w-[30%] min-w-[30px];
+  }
+
+  @media (max-width: 767px) { /* Tailwind's sm breakpoint max */
+    .main-text {
+        @apply w-full text-center mx-auto;
+    }
+  }
+  
+}
+  
+  
+  
+
+/*   
+  .nav-menu {
+    @apply block ml-80;
+  }
+
+ 
+} 
+
+/* @screen sm {
+  .nav-menu {
+    @apply hidden;
+  }
+
+  .nav-ul {
+    @apply flex justify-between items-center gap-10;
+  }
+} */
+
+/* @screen md {
+  .main-styles {
+    @apply flex-col-reverse items-center;
+  }
+
+  .main-text {
+    @apply w-full bg-black;
+  }
+
+  .main-text-content {
+    @apply text-center;
+  }
+
+  .main-text-rec {
+    @apply flex flex-col justify-center items-center;
+  }
+} */
+
+/* @screen lg {
+ 
+
+ 
+  .main-img-container {
+
+ 
+} */
+
+
+
+@layer utilities {
+  @screen md {
+    .nav-menu {
+      @apply hidden;
+    }
+    
+   .nav-link {
+    @apply flex;
+  }  
+
+  
+} 
+
+/* @screen sm{
+  .main-text {
+    @apply w-full; 
+}
+
+.main-img-div {
+    @apply w-full; 
+}
+} */
+ 
+}
