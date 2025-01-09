@@ -5,6 +5,17 @@ type PhotoProps = {
     largeSrc: string,
     text: string,
     bgColor: string, 
-    price
+    price: string
 
+}
+
+
+
+type ProductProps = {
+    id: number,
+    src: string,
+    alt: string,
+    name: string,
+    des: string,
+    purchase: string
 }

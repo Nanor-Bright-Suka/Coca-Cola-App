@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Base Styles */
 @layer base {
+  /* Home Page Styles*/
    .nav-link {
     @apply text-white text-lg font-bold;
   }
@@ -16,11 +19,28 @@
     @apply text-white text-sm block mt-5;
   } 
 
+  /* Product Page Card */
+  .products-heading{
+    @apply text-black font-bold text-center pb-10;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+  } 
+
+  .prdt-name {
+    @apply text-black text-lg font-bold m-2;
+  }
+
+  .prdt-des {
+    @apply font-light text-sm;
+  }
 
 }
 
+/*  complicated styles */
+
 
 @layer components {
+  /* Home Page Styles */
+
     .container-div {
     @apply overflow-hidden;
   }  
@@ -77,65 +97,41 @@
     @apply flex w-[30%] min-w-[30px];
   }
 
-  @media (max-width: 767px) { /* Tailwind's sm breakpoint max */
-    .main-text {
-        @apply w-full text-center mx-auto;
-    }
+ /* Product Page Styles */
+   .products-page {
+    @apply bg-[#f3f4f6] flex flex-col justify-around items-center h-screen;
+  }  
+
+  .p-heading-div {
+    @apply flex justify-center items-center pt-20;
   }
+
+
+  .product-main {
+   @apply flex flex-wrap gap-16 justify-center items-center p-4 h-screen;
+  } 
   
+
+
+ .product-card {
+  @apply flex flex-col justify-around items-center p-4 rounded-xl shadow-2xl text-center w-[27%] min-w-[270px] bg-white;
+
+ }
+
+ .prdt-btn {
+  @apply border-2 border-separate border-[#f7741d] px-4 py-2 rounded-md text-[#f7741d] m-2;
+ }
+
+
+
 }
-  
-  
-  
-
-/*   
-  .nav-menu {
-    @apply block ml-80;
-  }
-
- 
-} 
-
-/* @screen sm {
-  .nav-menu {
-    @apply hidden;
-  }
-
-  .nav-ul {
-    @apply flex justify-between items-center gap-10;
-  }
-} */
-
-/* @screen md {
-  .main-styles {
-    @apply flex-col-reverse items-center;
-  }
-
-  .main-text {
-    @apply w-full bg-black;
-  }
-
-  .main-text-content {
-    @apply text-center;
-  }
-
-  .main-text-rec {
-    @apply flex flex-col justify-center items-center;
-  }
-} */
-
-/* @screen lg {
- 
-
- 
-  .main-img-container {
-
- 
-} */
 
 
+
+/* Responsiveness */
 
 @layer utilities {
+  /* Home Page */
   @screen md {
     .nav-menu {
       @apply hidden;
@@ -145,17 +141,12 @@
     @apply flex;
   }  
 
-  
 } 
 
-/* @screen sm{
+@media (max-width: 767px) { /* Tailwind's sm breakpoint max */
   .main-text {
-    @apply w-full; 
+      @apply w-full text-center mx-auto;
+  }
 }
-
-.main-img-div {
-    @apply w-full; 
-}
-} */
  
 }

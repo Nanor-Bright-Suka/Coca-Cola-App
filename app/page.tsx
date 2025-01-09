@@ -8,7 +8,10 @@ import Link from 'next/link';
 import { FaRegUser } from "react-icons/fa";
 import { Lobster } from 'next/font/google';
 import { useState } from 'react';
-import {motion} from "framer-motion"
+import { photos } from "@/Utilities/Utils"
+import ProductCard from '@/components/ProductCard';
+
+//import {motion} from "framer-motion"
 
 
 const pacifico = Lobster({
@@ -18,33 +21,6 @@ const pacifico = Lobster({
 
 
 export default function HomePage() {
-  const photos: PhotoProps[] = [
-    {
-      id: 1,
-      src: "/images/background/fanta1.png",
-      largeSrc: "/images/background/fanta1.png",
-      text: "Orange Fanta",
-      bgColor: "#cf4f00", 
-       price: "$30"
-    },
-    {
-      id: 2,
-      src: "/images/background/fanta2.png",
-      largeSrc: "/images/background/fanta2.png",
-      text: "Cola Zero",
-      bgColor: "#797979",
-      price: "$50"
-    },
-    {
-      id: 3,
-      src: "/images/background/fanta3.png",
-      largeSrc: "/images/background/fanta3.png",
-      text: "Coca Cola",
-      bgColor: "#ac1a00",
-       price: "$20"
-    },
-  ];
-  
   const [selectedPhoto, setSelectedPhoto] = useState(photos[0]);
 
   const handleImageClick = (photo: PhotoProps) => {
@@ -53,11 +29,12 @@ export default function HomePage() {
 
 
   return (
+      <> 
     <div
       className="container-div"
       style={{
         backgroundColor: selectedPhoto.bgColor, 
-        transition: "background-color 0.5s ease", 
+        transition: "background-color 0.5s ease",
       }}
     >
 
@@ -171,6 +148,10 @@ export default function HomePage() {
         </div>
         
       </main> 
-    </div>
+        </div>
+
+       {/* Products Page */}
+        <ProductCard />
+        </>
   )
 }
