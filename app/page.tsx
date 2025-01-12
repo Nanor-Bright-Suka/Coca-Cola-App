@@ -96,7 +96,7 @@ export default function HomePage() {
          
            
            {/* Thumbnails */}
-  <div style={{ display: "flex", gap: "3rem", marginTop: "2rem" }}>
+  <div style={{ display: "flex", gap: "2.5rem", marginTop: "2rem" }}>
     {photos.map((photo) => (
     <div
       key={photo.id}
@@ -145,7 +145,6 @@ export default function HomePage() {
             src={selectedPhoto.largeSrc}
             width={370}
             height={370}
-            layout="responsive"
            className='main-img'
           />
         </div>
@@ -156,7 +155,7 @@ export default function HomePage() {
       <ProductCard />
       <About />
       <Note /> 
-      {/* <Blog />  */}
+      <Blog /> 
         </>
   )
 }

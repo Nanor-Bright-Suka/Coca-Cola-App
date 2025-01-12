@@ -11,7 +11,7 @@
   }
 
   .main-p {
-    @apply text-white text-sm;
+    @apply text-white text-sm mr-5;
 
   }
 
@@ -32,6 +32,7 @@
   .prdt-des {
     @apply font-light text-sm;
   }
+  
 /* About Styles */
 
 .about-h4 {
@@ -51,8 +52,22 @@
   line-height: 1.4;  
   max-width: 100%;
  }
+
+ /* Blog */
+ .blog-h4 {
+  @apply text-black font-bold text-3xl text-center m-10;
 }
 
+.blog-head{
+  @apply text-lg font-bold text-center my-2;
+}
+
+.blog-parag {
+  @apply text-lg text-center my-2;
+} 
+
+
+}
 /*  complicated styles */
 
 
@@ -167,10 +182,28 @@
   @apply border rounded-xl flex justify-center items-center py-6 px-6 bg-[#f7741d] mx-auto mt-20 hover:scale-105 transition-transform duration-300 ease-in-out w-[80%];
  }
 
+ /* Blog Page */
+ .blog-page {
+@apply  mx-auto;
 }
 
+.blog-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  
+  gap: 40px;
+  padding: 10px;
+  margin: 20px;
+}
 
+.blog-card {
+@apply flex flex-col justify-between items-center rounded-lg p-2 shadow-2xl mx-auto;
+}
 
+.blog-img  {
+  @apply object-cover w-full;
+}
+
+}
 /* Responsiveness */
 
 @layer utilities {

@@ -47,7 +47,7 @@ export const productCard: ProductProps[] = [
     purchase: "Buy Now"
   },
   {
-    id: 1,
+    id: 3,
     src: "/images/background/fanta3.png",
     name: "Coca Cola",
     alt: "Coca Cola Image",
@@ -63,28 +63,28 @@ export const productCard: ProductProps[] = [
 export const Blogs: BlogsProps[] = [
   {
     id: 1,
-    src: "/images/Blog-img/1.png",
+    src: "/images/Blog-img/1.jpg",
     alt: "Drinks",
     head: "Lorem ipsum dolor sit amet consectetur...",
     parag: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   },
   {
     id: 2,
-    src: "/images/Blog-img/2.png",
+    src: "/images/Blog-img/2.jpg",
     alt: "Customer",
    head: "Lorem ipsum dolor sit amet consectetur...",
     parag: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   },
   {
     id: 3,
-    src: "/images/BLog-img/3.png",
+    src: "/images/Blog-img/3.jpg",
     alt: "Coca Cola and Lemon",
     head: "Lorem ipsum dolor sit amet consectetur...",
     parag: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
   },
   {
     id: 4,
-    src: "/images/BLog-img/4.png",
+    src: "/images/Blog-img/4.jpg",
     alt: "Advertising Customer",
     head: "Lorem ipsum dolor sit amet consectetur...",
     parag: "Lorem ipsum dolor sit amet consectetur adipisicing elit."

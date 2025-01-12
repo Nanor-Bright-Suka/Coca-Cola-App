@@ -1,7 +1,7 @@
 import React from 'react'
 import { productCard } from '@/Utilities/Utils'
 import Image from 'next/image'
-import { div } from 'framer-motion/client'
+
 
 export default function ProductCard() {
     return (
