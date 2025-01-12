@@ -32,7 +32,25 @@
   .prdt-des {
     @apply font-light text-sm;
   }
+/* About Styles */
 
+.about-h4 {
+  @apply text-black font-bold text-3xl;
+
+ }
+
+ .about-p {
+  @apply text-[1rem] text-gray-500 max-w-md;
+ 
+ }
+
+ /* Note Page */
+ .note-h4 {
+  @apply text-white font-bold text-center flex-shrink-0;
+  font-size: clamp(0.90rem, 2vw, 2.5rem); 
+  line-height: 1.4;  
+  max-width: 100%;
+ }
 }
 
 /*  complicated styles */
@@ -99,7 +117,7 @@
 
  /* Product Page Styles */
    .products-page {
-    @apply bg-[#f3f4f6] flex flex-col justify-around items-center h-screen;
+    @apply bg-[#f3f4f6] flex flex-col justify-around items-center flex-wrap;
   }  
 
   .p-heading-div {
@@ -108,7 +126,7 @@
 
 
   .product-main {
-   @apply flex flex-wrap gap-16 justify-center items-center p-4 h-screen;
+   @apply flex flex-wrap gap-16 justify-center items-center p-4;
   } 
   
 
@@ -119,10 +137,35 @@
  }
 
  .prdt-btn {
-  @apply border-2 border-separate border-[#f7741d] px-4 py-2 rounded-md text-[#f7741d] m-2;
+  @apply border-2 border-separate border-[#f7741d] px-6 py-2 rounded-md text-[#f7741d] m-2 hover:bg-[#f7741d] hover:text-white;
  }
 
+ /* About Page Styles */
+ .about-page {
+  @apply flex flex-wrap justify-center items-center gap-10 pt-10;
+ }
 
+ .about-images {
+  @apply flex flex-col justify-center items-center
+   w-[55%] relative;
+ }
+
+ .splash-img {
+  @apply absolute bottom-0 -z-10;
+ }
+
+ .about-text {
+  @apply flex flex-col w-[35%] gap-5 justify-start items-start;
+ }
+
+  .about-btn {
+    @apply border-2 border-separate border-[#f7741d] px-6 py-2 rounded-md text-[#f7741d] m-2 hover:bg-[#f7741d] hover:text-white;
+ } 
+
+/* Note Section  */
+ .note-section {
+  @apply border rounded-xl flex justify-center items-center py-6 px-6 bg-[#f7741d] mx-auto mt-20 hover:scale-105 transition-transform duration-300 ease-in-out w-[80%];
+ }
 
 }
 
@@ -144,9 +187,16 @@
 } 
 
 @media (max-width: 767px) { /* Tailwind's sm breakpoint max */
+  .nav-menu {
+    @apply flex  ml-36;
+  }
   .main-text {
       @apply w-full text-center mx-auto;
   }
+  .about-text {
+    @apply justify-center items-center mx-5 w-full;
+  }
+
 }
  
 }

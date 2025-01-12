@@ -10,6 +10,9 @@ import { Lobster } from 'next/font/google';
 import { useState } from 'react';
 import { photos } from "@/Utilities/Utils"
 import ProductCard from '@/components/ProductCard';
+import About from '@/components/About';
+import Note from '@/components/Note';
+import Blog from '@/components/Blog';
 
 //import {motion} from "framer-motion"
 
@@ -150,8 +153,10 @@ export default function HomePage() {
       </main> 
         </div>
 
-       {/* Products Page */}
-        <ProductCard />
+      <ProductCard />
+      <About />
+      <Note /> 
+      {/* <Blog />  */}
         </>
   )
 }

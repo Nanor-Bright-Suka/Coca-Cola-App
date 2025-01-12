@@ -55,3 +55,38 @@ export const productCard: ProductProps[] = [
     purchase: "Buy Now"
   }
 ] 
+
+
+
+
+
+export const Blogs: BlogsProps[] = [
+  {
+    id: 1,
+    src: "/images/Blog-img/1.png",
+    alt: "Drinks",
+    head: "Lorem ipsum dolor sit amet consectetur...",
+    parag: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  {
+    id: 2,
+    src: "/images/Blog-img/2.png",
+    alt: "Customer",
+   head: "Lorem ipsum dolor sit amet consectetur...",
+    parag: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  {
+    id: 3,
+    src: "/images/BLog-img/3.png",
+    alt: "Coca Cola and Lemon",
+    head: "Lorem ipsum dolor sit amet consectetur...",
+    parag: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  },
+  {
+    id: 4,
+    src: "/images/BLog-img/4.png",
+    alt: "Advertising Customer",
+    head: "Lorem ipsum dolor sit amet consectetur...",
+    parag: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+  }
+] 

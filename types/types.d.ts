@@ -19,3 +19,11 @@ type ProductProps = {
     des: string,
     purchase: string
 }
+
+type BlogsProps = {
+    id: number,
+    src: string,
+    alt: string,
+    head: string,
+    parag: string
+}
