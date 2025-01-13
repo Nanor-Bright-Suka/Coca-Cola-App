@@ -13,6 +13,7 @@ import ProductCard from '@/components/ProductCard';
 import About from '@/components/About';
 import Note from '@/components/Note';
 import Blog from '@/components/Blog';
+import FAQ from '@/components/FAQ';
 
 //import {motion} from "framer-motion"
 
@@ -156,6 +157,7 @@ export default function HomePage() {
       <About />
       <Note /> 
       <Blog /> 
+      <FAQ />
         </>
   )
 }
