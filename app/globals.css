@@ -66,6 +66,18 @@
   @apply text-lg text-center my-2;
 } 
 
+/* Footer Page */
+  .footer-p {
+    @apply text-white text-lg;
+  }
+
+  .footer-h {
+    @apply text-white font-bold text-3xl;
+  }
+
+  .footer-icons {
+    @apply text-white text-xl flex gap-3;
+  }
 
 }
 /*  complicated styles */
@@ -185,7 +197,8 @@
  /* Blog Page */
  .blog-page {
 @apply  mx-auto;
-}
+
+ }
 
 .blog-main {
   display: grid;
@@ -203,6 +216,30 @@
   @apply object-cover w-full;
 }
 
+/* Footer Page */
+.footer-page {
+  @apply bg-[#ff7414] mt-20 mx-auto;
+ }
+ 
+ .footer-main {
+  @apply flex justify-around items-center flex-wrap gap-10 m-20;
+ }
+
+ .footer-logo {
+  @apply flex flex-col gap-3;
+ }
+
+ .footer-links {
+  @apply flex flex-col gap-2;
+ }
+
+ .footer-ic {
+  @apply flex flex-col gap-5;
+ }
+
+ .copyright {
+  @apply text-xl text-center text-white p-10;
+ }
 }
 /* Responsiveness */
 

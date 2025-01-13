@@ -14,6 +14,7 @@ import About from '@/components/About';
 import Note from '@/components/Note';
 import Blog from '@/components/Blog';
 import FAQ from '@/components/FAQ';
+import Footer from '@/components/Footer';
 
 //import {motion} from "framer-motion"
 
@@ -158,6 +159,7 @@ export default function HomePage() {
       <Note /> 
       <Blog /> 
       <FAQ />
+      <Footer /> 
         </>
   )
 }

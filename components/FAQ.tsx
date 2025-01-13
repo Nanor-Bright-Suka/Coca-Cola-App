@@ -11,16 +11,16 @@ export default function FAQ(){
     }
 
       return (
-        <div className="max-w-2xl mx-auto p-5">
+        <div className="max-w-2xl mx-auto p-10">
           <h1 className="text-2xl font-bold text-center mb-5">Frequently Asked Questions</h1>
           <div className="space-y-4">
             {FAQs.map((faq, index) => (
-              <div key={index} className="overflow-hidden m-5">
+              <div key={index} className="overflow-hidden">
                 <div
                   className="flex justify-between items-center w-full p-4 text-left"
                   onClick={() => toggleAnswer(index)}
                 >
-                  <span className="font-medium text-xl">{faq.question}</span>
+                  <span className="font-medium text-xl m-5">{faq.question}</span>
                   <span
                     className={`transform transition-transform duration-300 ${
                       openIndex === index ? "rotate-45" : ""
@@ -41,7 +41,9 @@ export default function FAQ(){
                 >
                   <div className="p-4">{faq.answer}</div>
                 </div>
+                <hr />
               </div>
+              
             ))}
           </div>
         </div>
