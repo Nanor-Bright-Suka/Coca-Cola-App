@@ -16,7 +16,7 @@
   }
 
   .main-span {
-    @apply text-white text-sm block mt-5;
+    @apply text-white text-sm block mt-5 mr-16;
   } 
 
   /* Product Page Card */
@@ -261,7 +261,7 @@
     @apply flex  ml-36;
   }
   .main-text {
-      @apply w-full text-center mx-auto;
+      @apply w-full justify-center items-center mx-2;
   }
   .about-text {
     @apply justify-center items-center mx-5 w-full;

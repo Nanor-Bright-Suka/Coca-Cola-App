@@ -95,7 +95,7 @@ export default function HomePage() {
          
            
            {/* Thumbnails */}
-  <div style={{ display: "flex", gap: "2.5rem", marginTop: "2rem" }}>
+  <div style={{ display: "flex", gap: "1.5rem", marginTop: "2rem", marginRight: "2rem" }}>
     {photos.map((photo) => (
     <div
       key={photo.id}
