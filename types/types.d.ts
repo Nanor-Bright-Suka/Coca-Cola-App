@@ -29,7 +29,7 @@ type BlogsProps = {
 }
 
 type FAQProps = {
-    id: number,
+    index: number,
     question: string,
     answer: string
 }

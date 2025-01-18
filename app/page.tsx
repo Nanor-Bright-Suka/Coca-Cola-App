@@ -5,7 +5,6 @@ import Image from 'next/image'
 import Logo from "/public/images/background/logo.png"
 import { IoMdMenu } from "react-icons/io";
 import Link from 'next/link';
-import { FaRegUser } from "react-icons/fa";
 import { Lobster } from 'next/font/google';
 import { useState } from 'react';
 import { photos } from "@/Utilities/Utils"
@@ -61,14 +60,12 @@ export default function HomePage() {
               <div className='nav-menu'>
                     <IoMdMenu style={{ color: "white", fontSize: "2.5rem" }} />
               </div>
-              <Link href={"/home"} className='nav-link'>HOME</Link>
-              <Link href={"/category"} className='nav-link'>CATEGORY</Link>
+              <Link href={"/"} className='nav-link'>HOME</Link>
+              <Link href={"/products"} className='nav-link'>PRODUCT</Link>
               <Link href={"/blog"} className='nav-link'>BLOG</Link>
               <Link href={"/about"} className='nav-link'>ABOUT</Link>
               <Link href={"/contact"} className='nav-link'>CONTACT</Link>
-              <Link href={"/login"} className='nav-link'>
-                <FaRegUser style={{ color: "white", fontSize: "1.5rem",margin: "0.8rem" }} />
-              </Link>
+              <Link href={"/faq"} className='nav-link'> FAQ Page</Link>
         </nav>
 
       </header>

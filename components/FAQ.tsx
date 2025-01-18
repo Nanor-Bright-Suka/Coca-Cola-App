@@ -11,7 +11,7 @@ export default function FAQ(){
     }
 
       return (
-        <div className="max-w-2xl mx-auto p-10">
+        <div className="max-w-2xl mx-auto p-10 cursor-pointer">
           <h1 className="text-2xl font-bold text-center mb-5">Frequently Asked Questions</h1>
           <div className="space-y-4">
             {FAQs.map((faq, index) => (
