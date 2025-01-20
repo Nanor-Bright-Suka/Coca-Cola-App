@@ -31,6 +31,13 @@ export default function HomePage() {
     setSelectedPhoto(photo);
   };
 
+  //Toggle Drop down visibility
+  const [isDropdownVisible, setDropdownVisible] = useState<Boolean>(false);
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
+
 
   return (
       <> 
@@ -58,14 +65,16 @@ export default function HomePage() {
         {/* Navigation */}
         <nav className='nav'> 
               <div className='nav-menu'>
-                    <IoMdMenu style={{ color: "white", fontSize: "2.5rem" }} />
-              </div>
+                    <IoMdMenu style={{ color: "white", fontSize: "2.5rem" }} onClick={toggleDropdown}/>
+            </div>
+            <div className={`dropdown-menu ${isDropdownVisible ? "visible": "hidden"}`}>
               <Link href={"/"} className='nav-link'>HOME</Link>
               <Link href={"/products"} className='nav-link'>PRODUCT</Link>
               <Link href={"/blog"} className='nav-link'>BLOG</Link>
               <Link href={"/about"} className='nav-link'>ABOUT</Link>
               <Link href={"/contact"} className='nav-link'>CONTACT</Link>
               <Link href={"/faq"} className='nav-link'> FAQ Page</Link>
+            </div>
         </nav>
 
       </header>
@@ -78,24 +87,24 @@ export default function HomePage() {
         
         {/* main content */}
         <div className='main-text'>
-
+                <div className='main-wrapper'>  
             <h1 className={`${pacifico.className} main-h1`}>
               {selectedPhoto.text}
             </h1>
             <p className='main-p'>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.Impedit assumenda illum nulla nam deserunt.
+              Lorem ipsum dolor sit amet consectetur,  adipisicing elit.Impedit assumenda illum nulla nam deserunt.
             </p>
             <button className='main-btn'>
               Order Now
             </button>
             <br/>
             <span className="main-span">
-            _________ TOP RECOMMENDATION ___________
+            _________ TOP RECOMMENDATION _________
             </span> 
          
-           
+            </div>
            {/* Thumbnails */}
-  <div style={{ display: "flex", gap: "1.5rem", marginTop: "2rem", marginRight: "2rem" }}>
+  <div style={{ display: "flex", gap: "1.2rem", marginTop: "2rem" }} className="thumbnail">
     {photos.map((photo) => (
     <div
       key={photo.id}

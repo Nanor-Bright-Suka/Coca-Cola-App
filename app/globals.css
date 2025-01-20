@@ -10,13 +10,13 @@
     @apply text-white text-lg font-bold;
   }
 
-  .main-p {
-    @apply text-white text-sm mr-5;
+   .main-p {
+    @apply text-white text-sm;
 
-  }
+  } 
 
   .main-span {
-    @apply text-white text-sm block mt-5 mr-16;
+    @apply text-white text-sm;
   } 
 
   /* Product Page Card */
@@ -126,8 +126,12 @@
     border-radius: 8px;
   }
 
+  .main-wrapper {
+    @apply flex flex-col justify-center items-center;
+  }
+  
   .main-styles {
-    @apply flex justify-around items-center  mt-10 flex-wrap-reverse max-w-[95%] gap-10;
+    @apply flex justify-around items-center  mt-10 flex-wrap-reverse max-w-[95%] gap-5;
   }
 
   .main-text {
@@ -256,17 +260,47 @@
 
 } 
 
-@media (max-width: 767px) { /* Tailwind's sm breakpoint max */
+@media (max-width: 800px) { /* Tailwind's sm breakpoint max */
   .nav-menu {
     @apply flex  ml-36;
   }
   .main-text {
-      @apply w-full justify-center items-center mx-2;
+      @apply flex flex-col justify-center items-center;
   }
+
+  .main-wrapper {
+    @apply  mr-4;
+  }
+
+  .thumbnail {
+    @apply gap-4;
+  }
+
+  .main-p {
+    @apply text-white text-sm max-w-md mx-16;
+
+  }
+
   .about-text {
     @apply justify-center items-center mx-5 w-full;
   }
 
+   /* Dropdown Menu */
+   /* .dropdown-menu {
+    @apply fixed top-0 left-0 w-full h-40 bg-[#ff7414] text-white flex flex-col items-center  justify-between p-4 transform -translate-y-full transition-transform duration-300 z-50;
+  }
+
+  .dropdown-menu.visible {
+    @apply translate-y-0;
+  }
+
+  .dropdown-menu.hidden {
+    @apply -translate-y-full;
+  } */
+
+  .nav-link {
+    @apply py-2 text-lg hover:text-gray-300;
+  }
 }
  
 }
