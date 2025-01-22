@@ -269,7 +269,7 @@
   }
 
   .main-wrapper {
-    @apply  mr-4;
+    @apply  mr-2;
   }
 
   .thumbnail {
@@ -277,7 +277,7 @@
   }
 
   .main-p {
-    @apply text-white text-sm max-w-md mx-16;
+    @apply text-white text-sm max-w-md mx-14;
 
   }
 

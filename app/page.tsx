@@ -67,14 +67,14 @@ export default function HomePage() {
               <div className='nav-menu'>
                     <IoMdMenu style={{ color: "white", fontSize: "2.5rem" }} onClick={toggleDropdown}/>
             </div>
-            <div className={`dropdown-menu ${isDropdownVisible ? "visible": "hidden"}`}>
+            {/* <div className={`dropdown-menu ${isDropdownVisible ? "visible": "hidden"}`}> */}
               <Link href={"/"} className='nav-link'>HOME</Link>
               <Link href={"/products"} className='nav-link'>PRODUCT</Link>
               <Link href={"/blog"} className='nav-link'>BLOG</Link>
               <Link href={"/about"} className='nav-link'>ABOUT</Link>
               <Link href={"/contact"} className='nav-link'>CONTACT</Link>
               <Link href={"/faq"} className='nav-link'> FAQ Page</Link>
-            </div>
+            {/* </div> */}
         </nav>
 
       </header>
