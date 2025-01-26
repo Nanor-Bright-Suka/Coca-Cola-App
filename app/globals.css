@@ -286,7 +286,7 @@
   }
 
    /* Dropdown Menu */
-   /* .dropdown-menu {
+    .dropdown-menu {
     @apply fixed top-0 left-0 w-full h-40 bg-[#ff7414] text-white flex flex-col items-center  justify-between p-4 transform -translate-y-full transition-transform duration-300 z-50;
   }
 
@@ -296,7 +296,7 @@
 
   .dropdown-menu.hidden {
     @apply -translate-y-full;
-  } */
+  } 
 
   .nav-link {
     @apply py-2 text-lg hover:text-gray-300;

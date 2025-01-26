@@ -63,18 +63,18 @@ export default function HomePage() {
         </div>
 
         {/* Navigation */}
-        <nav className='nav'> 
+          <nav className='nav'>
+             <div className={`dropdown-menu ${isDropdownVisible ? "visible": "hidden"}`}> 
               <div className='nav-menu'>
                     <IoMdMenu style={{ color: "white", fontSize: "2.5rem" }} onClick={toggleDropdown}/>
             </div>
-            {/* <div className={`dropdown-menu ${isDropdownVisible ? "visible": "hidden"}`}> */}
               <Link href={"/"} className='nav-link'>HOME</Link>
               <Link href={"/products"} className='nav-link'>PRODUCT</Link>
               <Link href={"/blog"} className='nav-link'>BLOG</Link>
               <Link href={"/about"} className='nav-link'>ABOUT</Link>
               <Link href={"/contact"} className='nav-link'>CONTACT</Link>
               <Link href={"/faq"} className='nav-link'> FAQ Page</Link>
-            {/* </div> */}
+            </div>
         </nav>
 
       </header>
@@ -104,7 +104,7 @@ export default function HomePage() {
          
             </div>
            {/* Thumbnails */}
-  <div style={{ display: "flex", gap: "1.2rem", marginTop: "2rem" }} className="thumbnail">
+  <div style={{ display: "flex", gap: "1.5rem", marginTop: "2rem" }} className="thumbnail">
     {photos.map((photo) => (
     <div
       key={photo.id}
@@ -122,8 +122,8 @@ export default function HomePage() {
       <Image
         src={photo.src}
         alt={`Thumbnail ${photo.id}`}
-        width={100}
-        height={100}
+        width={90}
+        height={90}
         style={{
           scale: selectedPhoto.id === photo.id ? 1 : 0.8, // Highlight selected
           opacity: selectedPhoto.id === photo.id ? 1 : 0.5, // Dim others
