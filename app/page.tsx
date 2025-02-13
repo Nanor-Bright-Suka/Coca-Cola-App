@@ -3,7 +3,7 @@
 import './globals.css';
 import Image from 'next/image'
 import Logo from "/public/images/background/logo.png"
-import { IoMdMenu } from "react-icons/io";
+import { IoMdClose, IoMdMenu } from "react-icons/io";
 import Link from 'next/link';
 import { Lobster } from 'next/font/google';
 import { useState } from 'react';
@@ -14,7 +14,7 @@ import Note from '@/components/Note';
 import Blog from '@/components/Blog';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
-
+import { MouseFollower, UpdateFollower } from 'react-mouse-follower'
 //import {motion} from "framer-motion"
 
 
@@ -31,16 +31,18 @@ export default function HomePage() {
     setSelectedPhoto(photo);
   };
 
-  //Toggle Drop down visibility
-  const [isDropdownVisible, setDropdownVisible] = useState<Boolean>(false);
+  // Menu Toggling
+ 
+ const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () => {
-    setDropdownVisible(!isDropdownVisible);
-  };
+  const openNav = () => setIsOpen(true);
+  const closeNav = () => setIsOpen(false);
+
 
 
   return (
-      <> 
+    <> 
+      <MouseFollower />  
     <div
       className="container-div"
       style={{
@@ -48,7 +50,13 @@ export default function HomePage() {
         transition: "background-color 0.5s ease",
       }}
     >
-
+       <UpdateFollower
+        mouseOptions={{
+          backgroundColor: "white",
+          zIndex: 10,
+          followSpeed: 1.5,
+        }}
+      > 
       <header className="header-styles">
 
         {/* Logo */}
@@ -63,24 +71,30 @@ export default function HomePage() {
         </div>
 
         {/* Navigation */}
-          <nav className='nav'>
-            
-              <div className='nav-menu'>
-                    <IoMdMenu style={{ color: "white", fontSize: "2.5rem" }} onClick={toggleDropdown}/>
-            </div>
+           
+          <IoMdMenu style={{ color: "white", fontSize: "2.5rem" }} onClick={openNav} className="nav-menu menu-bar" /> 
+          
+          <nav style={{ width: isOpen ? "100%" : "" }} className="nav"> 
+          
+            {/* Menu Icon */}
+            <div className="nav-menu" onClick={closeNav}>
+             <IoMdClose style={{ color: "white", fontSize: "2.5rem" }} className='close-button' />
+             </div>
+
+             {/* Main navigation links */}
+            <div className={`links links-overlay`}>  
               <Link href={"/"} className='nav-link'>HOME</Link>
               <Link href={"/products"} className='nav-link'>PRODUCT</Link>
               <Link href={"/blog"} className='nav-link'>BLOG</Link>
               <Link href={"/about"} className='nav-link'>ABOUT</Link>
               <Link href={"/contact"} className='nav-link'>CONTACT</Link>
               <Link href={"/faq"} className='nav-link'> FAQ Page</Link>
-          
-        </nav>
-
+            </div>
+          </nav>
+        
       </header>
 
-      
-
+     
 
       {/* Main content */}
       <main className='main-styles'>
@@ -143,7 +157,7 @@ export default function HomePage() {
     </div>
   ))}
 </div>
-
+ 
         </div>
 
       {/* Larger  image */}
@@ -157,7 +171,8 @@ export default function HomePage() {
           />
         </div>
         
-      </main> 
+          </main> 
+          </UpdateFollower>
         </div>
 
       <ProductCard />
